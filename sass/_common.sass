@@ -36,14 +36,277 @@
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
+=reg
+	font-family: "Myriad Pro", Arial, sans-serif 
+	
++font(Myriad Pro Condensed, myriadpro-cond)  
+=cond
+	font-family: "Myriad Pro Condensed", Arial, sans-serif 
+	-webkit-font-smoothing: antialiased
+
+$org: #fda213
+$bl: #00afee
+$cl: #21262b
 	
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	min-width: 1024px
+	background: #f0f0f0 
+	+reg
+	font-size: 14px 
 	line-height: 1.4
-
+	color: $cl 
+a
+	text-decoration: none
+	color: $bl 
+input
+	+box
+input, button
+	+reg
+	font-size: 14px
 
 // common blocks      
+.l-center
+	width: 960px
+	margin: 0 auto
+	+clr
+
+.wrapper
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -50px
+	background-size: 100% auto 
+	background-position: 0 100% 
+	background-repeat: no-repeat 
+.wrapper__in
+	position: relative
+	padding-bottom: 25px
+	z-index: 2 
+.wrapper__push
+	height: 50px
+	clear: both
+
+.top
+	background: #21262b 
+.top__city
+	float: left
+	margin-right: 30px
+	padding: 15px 20px
+	background: #2c2f39 
+	span
+		float: left
+		margin-right: 25px
+		font-size: 18px
+		color: $bl 
+		line-height: 30px
+	button
+		float: left
+		width: 30px
+		height: 30px 
+		+cond
+		color: #FFF
+		text-transform: uppercase 
+.top__city-yes
+	margin-right: 6px
+	background: $bl
+.top__city-no
+	background: $org 
+.top__site
+	float: left
+	margin-top: 17px
+	color: #A2A3A4
+	a, span
+		display: inline-block
+.top__site-name
+	margin-left: 8px
+	font-size: 16px
+	text-decoration: underline
+	color: #fff 
+.top__site-arr
+	margin-left: 15px 
+	+s(top-site-arr)
+	vertical-align: middle
+.top__close
+	float: right
+	margin-top: 17px
+	+s(top-close)
+
+.header
+	position: relative
+	height: 145px
+	z-index: 4 
+.header_filial
+	.logo
+		top: 40px
+		background: none
+		img
+			display: block
+			padding: 10px 30px 10px 0
+			border-right: 1px solid #e0e0e0 
+	.search-form
+		top: 90px
+	.phone
+		top: 35px
+		left: auto
+		right: 10px
+.logo
+	position: absolute
+	top: 25px
+	left: 0	
+	+s(vostok-logo)
+
+
+.nav
+	position: relative
+	display: table
+	width: 100%
+	border: 1px solid #efefef
+	background: #fff
+	box-shadow: 0 0 13px rgba(56,60,71,.2)
+	z-index: 200
+.nav__list
+	display: table-row
+.nav__item
+	display: table-cell
+	border-left: #E3E3E3 1px solid
+	&:first-child
+		border: none
+	&:first-letter
+		text-transform: uppercase
+	&:hover, &.is-active
+		.nav__in
+			>a
+				background: #F4F4F4
+				color: $org  
+				&:after
+					content: ""
+					position: absolute
+					bottom: -1px
+					left: -1px
+					right: -1px
+					height: 3px
+					background: $org 
+	&.is-active
+		.nav__in
+			>a
+				cursor: default
+	&:hover
+		.nav__sub
+			display: block
+.nav__in
+	position: relative
+	+cond
+	font-size: 19px
+	>a
+		display: block
+		height: 52px
+		padding: 0 20px
+		line-height: 52px
+		text-align: center
+		color: #000  
+.nav__sub
+	display: none
+	position: absolute
+	top: 100%
+	left: 0
+	width: 220px
+	padding-top: 17px 
+	ul
+		position: relative
+		padding: 7px 20px
+		background: #FFF 
+		box-shadow: 0 0 15px rgba(0,0,0,.17)
+		&:before
+			content: ""
+			position: absolute
+			top: -10px
+			left: 50px
+			+arr(20,10,#fff,t) 
+		li
+			border-top: #E3E3E3 1px solid 
+			&:first-child
+				border: none
+			&:first-letter
+				text-transform: uppercase
+			&.is-active
+				a
+					color: $org 
+		a
+			display: block
+			padding: 10px 0
+			color: $bl 
+			&:hover
+				color: $org 
+.search-form
+	position: absolute
+	top: 58px 
+	right: 0
+	font-size: 0
+	input, button
+		height: 35px
+		vertical-align: top
+	input
+		width: 180px
+		padding: 0 15px
+		+placeholder-color(#8e969d)
+	button
+		width: 50px
+		background: $bl
+		font-size: 0
+		i
+			display: inline-block
+			+s(search)
+.phone
+	position: absolute
+	top: 65px
+	left: 470px
+	font-size: 0
+	line-height: 1
+.phone__ico, .phone__number
+	display: inline-block
+	vertical-align: middle
+.phone__ico
+	position: relative
+	top: -2px
+	margin-right: 20px
+	+s(phone)
+.phone__number
+	font-size: 16px
+	span
+		font-size: 30px
+		color: $bl 
+
+.footer
+	height: 50px
+	background: #2d353d
+	font-size: 13px
+	color: #FFF 
+.copyright
+	float: left
+	height: 50px
+	line-height: 50px
+.created
+	float: right
+	height: 50px
+	line-height: 50px
+	span, a
+		display: inline-block
+		vertical-align: middle
+	a
+		margin-left: 30px
+		+s(created)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

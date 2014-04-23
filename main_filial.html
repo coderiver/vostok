@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper" style="background-image: url(img/main-filial.jpg)">
+	<!-- top -->
+	<div class="top">
+		<div class="l-center">
+			<div class="top__city">
+				<span>Вы из тюмени?</span>
+				<button class="top__city-yes">да</button>
+				<button class="top__city-no">нет</button>
+			</div>
+			<div class="top__site">
+				<span>Предлагаем Вам перейти на сайт</span>
+				<a class="top__site-name" href="#">Тюменьэнергосбыт</a>
+				<a class="top__site-arr" href="#"></a>
+			</div>
+			<button class="top__close"></button>
+		</div>
+	</div>
+	<div class="wrapper__in">
+		<div class="l-center">
+			<!-- header -->
+			<header class="header header_filial">
+				<a class="logo" href="#">
+					<img src="img/logo-filial.png" alt="">
+				</a>
+				<div class="phone">
+					<i class="phone__ico"></i>
+					<div class="phone__number">+7 495 <span>775-24-97</span></div>
+				</div>
+				<div class="search-form">
+					<input type="text" placeholder="Поиск по сайту">
+					<button><i></i></button>
+				</div>
+			</header>
+			<!-- nav -->
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">о компании</a>
+						</div>
+					</li>
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">раскрытие информации</a>
+						</div>
+					</li>
+					<li class="nav__item is-active">
+						<div class="nav__in">
+							<a href="#">закупки</a>
+						</div>
+					</li>
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">клиентам</a>
+							<div class="nav__sub">
+								<ul>
+									<li><a href="#">стандарты качества</a></li>
+									<li><a href="#">обслуживания клиентов</a></li>
+									<li><a href="#">юридическим  лицам</a></li>
+									<li class="is-active"><a href="#">физическим  лицам</a></li>
+									<li><a href="#">история компании</a></li>
+									<li><a href="#">органы управления</a></li>
+									<li><a href="#">информация об аудиторе и регистраторе</a></li>
+									<li><a href="#">исполнительный аппарат</a></li>
+									<li><a href="#">структура холдинга</a></li>
+									<li><a href="#">реквизиты</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">пресс-центр</a>
+						</div>
+					</li>	
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">карьера</a>
+						</div>
+					</li>
+					<li class="nav__item">
+						<div class="nav__in">
+							<a href="#">контакты</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<!-- map -->
+			<div class="map map_filial">
+				<div class="map__in">
+					<a class="map__point is-blue is-bigger" href="Тюмень" style="top: 152px; left: 386px;">Тюмень</a>
+					<a class="map__point is-blue" href="Красноярск" style="top: 223px; left: 308px;">Красноярск</a>
+				</div>
+				<div class="map__city">Тюмень</div>
+				<button class="map__back"><i></i><span>Вернуться на карту региона</span></button>
+				<div id="map" class="map__real"></div>
+				<!-- enter -->
+				<div class="enter">
+					<i class="enter__ico"></i>
+					<div class="enter__title">Вход в личный кабинет</div>
+					<a class="enter__btn" href="#">Войти</a>
+				</div>
+			</div>
+			<!-- main -->
+			<div class="main">
+				<div class="main__column">
+					<ul class="main__links main__links_filial">
+						<li class="is-orange"><a href="#"><i class="main__ico-4"></i><span>юридическим лицам</span></a></li>
+						<li class="is-orange"><a href="#"><i class="main__ico-1"></i><span>физическим лицам</span></a></li>
+						<li class="is-orange"><a href="#"><i class="main__ico-2"></i><span>интернет-приемная</span></a></li>
+					</ul>
+					<ul class="main__links main__links_wide main__links_filial">
+						<li><a href="#"><i class="main__ico-3"></i><span>добросовестные потребители</span></a></li>
+						<li><a href="#"><i class="main__ico-4"></i><span>Список лучших клиентов</span></a></li>
+					</ul>
+				</div>
+				<div class="main__column">
+					<!-- main news -->
+					<div class="m-news m-news_filial">
+						<div class="m-news__slider cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pager=".m-news__pager" data-cycle-timeout="0" data-cycle-slides=".m-news__list" data-cycle-visible="1">
+							<div class="m-news__list">
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+							</div>
+							<div class="m-news__list">
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+							</div>
+							<div class="m-news__list">
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+								<div class="m-news__item">
+									<div class="m-news__date">28<span>января</span></div>
+									<div class="m-news__in">
+										<div class="m-news__title">
+											<a href="#">Корабль сел на мель</a>
+										</div>
+										<div class="m-news__text">"Олег Найденов" был поврежден сенегальским судном в порту Дакара</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="m-news__pager"></div>
+						<a class="m-news__all" href="#">
+							<span>все новости</span><i></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- partners -->
+			<div class="partners partners_filial">
+				<div class="partners__title">Наши партнеры</div>
+				<div class="partners__slider">
+					<button class="partners__prev"></button>
+					<button class="partners__next"></button>
+					<div class="partners__in cycle-slideshow" data-cycle-fx="carousel" data-cycle-prev=".partners__prev" data-cycle-next=".partners__next" data-cycle-timeout="0" data-cycle-slides=".partners__item" data-cycle-visible="4">
+						<div class="partners__item"><img src="img/partner1.png" alt=""></div>
+						<div class="partners__item"><img src="img/partner2.png" alt=""></div>
+						<div class="partners__item"><img src="img/partner1.png" alt=""></div>
+						<div class="partners__item"><img src="img/partner2.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- map background -->
+		<div class="map-bg map-bg_filial">
+			<div class="map-bg__in"></div>
+			<div class="map-bg__filial" style="background-image: url(img/map-filial.png)"></div>
+		</div>
+	</div>
+	<div class="wrapper__push"></div>
+</div>
+<!-- footer -->
+<div class="footer">
+	<div class="l-center">
+		<div class="copyright">© 2013 ОАО «Энергосбытовая компания «Восток»</div>
+		<div class="created">
+			<span>Разработка сайта:</span>
+			<a class="created__logo" href="#"></a>
+		</div>
+	</div>
+</div>
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
