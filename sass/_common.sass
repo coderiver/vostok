@@ -56,11 +56,11 @@ body
 	line-height: 1.4
 	color: $cl 
 a
-	text-decoration: none
 	color: $bl 
-input
+input, textarea
+	width: 100%
 	+box
-input, button
+input, button, textarea
 	+reg
 	font-size: 14px
 
@@ -120,7 +120,6 @@ input, button
 .top__site-name
 	margin-left: 8px
 	font-size: 16px
-	text-decoration: underline
 	color: #fff 
 .top__site-arr
 	margin-left: 15px 
@@ -164,6 +163,8 @@ input, button
 	background: #fff
 	box-shadow: 0 0 13px rgba(56,60,71,.2)
 	z-index: 200
+	a
+		text-decoration: none
 .nav__list
 	display: table-row
 .nav__item

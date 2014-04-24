@@ -1,9 +1,23 @@
 // default layout
 .l
 	+clr
-	.l-col1
+.l_reverse
+	.l-aside
 		float: left
-		width: 20%
-	.l-col2
+	.l-section
 		float: right
-		width: 70%
+.l-aside
+	float: right
+	width: 225px
+.l-section
+	float: left
+	width: 615px
+.l-aside, .l-section, .l-page
+	padding: 25px
+	background: #fff
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+.l-section_reset
+	width: 665px
+	padding: 0
+	background: none
+	box-shadow: none 

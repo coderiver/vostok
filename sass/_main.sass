@@ -49,6 +49,7 @@
 	background: $org 
 	font-size: 12px
 	color: #FFF 
+	text-decoration: none
 	&:after
 		content: ""
 		position: absolute
@@ -175,6 +176,7 @@
 		font-size: 18px 
 		color: $bl 
 		line-height: 1.2
+		text-decoration: none
 		&:after
 			content: ""
 			position: absolute
@@ -238,20 +240,21 @@
 .partners__slider
 	position: relative
 	padding: 0 46px 0 45px
-.partners__prev, .partners__next
+.partners__prev, .partners__next,
+.gallery__prev, .gallery__next
 	position: absolute
 	top: 50%
 	margin-top: -13px
-.partners__prev
+.partners__prev, .gallery__prev
 	left: 0
-	+s(partners-prev)
+	+s(sl-prev)
 	&:hover
-		+sp(partners-prev-h)
-.partners__next
+		+sp(sl-prev-h)
+.partners__next, .gallery__next
 	right: 0
-	+s(partners-next)
+	+s(sl-next)
 	&:hover
-		+sp(partners-next-h)
+		+sp(sl-next-h)
 .partners__item
 	width: 216px
 	height: 90px 
@@ -273,6 +276,8 @@
 	margin-bottom: 20px
 	background-color: #fefefe
 	box-shadow: 0 0 13px rgba(56,60,71,.2)
+	a
+		text-decoration: none
 .m-news_filial
 	height: 260px
 	.m-news__item
@@ -410,9 +415,6 @@
 .m-contacts__phone
 	span
 		color: $org 
-.m-contacts__mail
-	a
-		text-decoration: underline
 .m-contacts__ico
 	position: absolute
 	top: 35px

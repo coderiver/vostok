@@ -72,11 +72,34 @@ function init () {
 
 $(document).ready(function() {
 
-	//map 
-	
-	
+	// select
+    var select = $('.js-select');
+    select.find('select').on('change', function() {
+        var optionSelected = $("option:selected", this),
+            valueSelected = this.value;
+        $(this).parent().find('.select__head span').html(valueSelected);
+    });
 
-	// Для уничтожения используется метод destroy.
-	//myMap.destroy();
+    // question
+    var question = $('.js-question'),
+        question_sm = $('.js-question-sm');
+    question.find('.question__link a').on('click', function(){
+        var text1 = 'Ответ',
+            text2 = 'Скрыть ответ';
+        $(this).parent().prev().slideToggle();
+        if ($(this).hasClass('is-active')) {
+            $(this).removeClass('is-active');
+            $(this).html(text1);
+        }
+        else{
+            $(this).addClass('is-active');
+            $(this).html(text2);
+        }
+        return false;
+    });
+    question_sm.find('.question__sm-text').on('click', function(){
+        $(this).toggleClass('is-active');
+        $(this).next().slideToggle();
+    });
 
 });
