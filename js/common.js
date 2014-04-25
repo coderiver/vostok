@@ -7,6 +7,12 @@ function init () {
     	btn_back = $('.map__back'),
     	map_container = $('.map__real'),
     	map_bg = $('.map-bg');
+    myMap = new ymaps.Map('map', {
+      center: [55.753994, 37.622093],
+      zoom: 9,
+      behaviors: ['default', 'scrollZoom']
+    });
+
     btn.on('click', function () {
     	// Получаем название города
         var map_city = $(this).attr('href');
@@ -15,19 +21,10 @@ function init () {
         btn_back.fadeIn();
         map_bg.fadeOut();
 
-
-        myMap = new ymaps.Map('map', {
-          center: [55.753994, 37.622093],
-          zoom: 9,
-          behaviors: ['default', 'scrollZoom']
-        });
-        
-        
         // Поиск координат
         ymaps.geocode(map_city, {
         	results: 1 // Если нужен только один результат, экономим трафик пользователей
         }).then(function (res) {
-
         	// Выбираем первый результат геокодирования.
         	var firstGeoObject = res.geoObjects.get(0),
             	// Координаты геообъекта.
@@ -53,22 +50,22 @@ function init () {
         		iconImageOffset: [-15, -32]
         	});
         	myMap.geoObjects.add(myPlacemark);
+        }, function (success) {
+            // Если геокодирование не удалось, сообщаем об ошибке.
+            alert('sdfa');
         });
+
         return false;
     });
 	btn_back.on('click', function(){
-		myMap.destroy(); // Деструктор карты
-		myMap = null;
+		//myMap.destroy(); // Деструктор карты
+		//myMap = null;
 		map_container.fadeOut();
 		btn_back.fadeOut();
 		map_bg.fadeIn();
 		return false;
 	});
 }
-
-
-
-
 
 $(document).ready(function() {
 
@@ -101,5 +98,39 @@ $(document).ready(function() {
         $(this).toggleClass('is-active');
         $(this).next().slideToggle();
     });
+
+    // info accordeon
+    var accos = $('.js-info-accos');
+    accos.find('.info__accos-title').on('click', function(){
+        $(this).toggleClass('is-active');
+        $(this).next().slideToggle();
+    });
+
+    // popup
+    var popup = $('.js-popup'),
+        popup_close = $('.popup__close, .popup__bg');
+    popup.on('click', function(){
+        var el = $(this).data('popup');
+        $('.'+el).fadeIn();
+        return false;
+    });
+    popup_close.on('click', function(){
+        $(this).parents('.popup').fadeOut();
+    });
+
+    // fancybox
+    var fancybox_el = $('.js-fancybox');
+    if (fancybox_el.length) {
+        fancybox_el.fancybox({
+            maxWidth: 840,
+            padding: [60, 60, 20, 60],
+            helpers: {
+                title: {
+                    type: 'inside',
+                    locked: false
+                }
+            }
+        });
+    };
 
 });

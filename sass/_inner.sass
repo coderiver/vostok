@@ -27,7 +27,7 @@
 	font-size: 25px
 	color: #fff 
 
-@each $s in ico-vacancy, ico-internet, ico-purchases, ico-registrator, ico-badcustomers, ico-news, ico-review
+@each $s in ico-vacancy, ico-internet, ico-purchases, ico-registrator, ico-badcustomers, ico-news, ico-review, ico-info, ico-control, ico-photo, ico-contact
 	.title__#{$s}
 		+s(#{$s})
 
@@ -38,7 +38,7 @@
 	box-shadow: 0 0 12px rgba(0,0,0,.12)
 .region__title
 	display: inline-block
-	margin-right: 10px 
+	margin-right: 15px 
 	vertical-align: middle
 	font-size: 16px
 	
@@ -229,6 +229,7 @@
 	text-align: center
 	line-height: 1.2
 	vertical-align: middle
+	text-decoration: none
 .btn_orange
 	background: $org 
 
@@ -471,9 +472,10 @@
 .news__tags
 	margin-bottom: 25px
 .news__all
-	position: absolute
-	top: 435px 
-	left: 0
+	position: fixed
+	top: 520px 
+	left: 50%
+	margin-left: -480px
 	padding: 7px 17px
 	background: $bl
 	box-shadow: 0 0 13px rgba(56,60,71,.22)
@@ -607,6 +609,25 @@
 	padding-top: 5px
 	a
 		color: $org 
+.review__write
+	position: fixed
+	top: 600px 
+	right: 50%
+	margin-right: -480px
+	padding: 10px 15px
+	background: $bl
+	box-shadow: 0 0 13px rgba(56,60,71,.22)
+	font-size: 0
+	span
+		+cond   
+		font-size: 18px
+		color: #fff 
+	i
+		margin-right: 10px 
+		+s(review-write)
+	i, span
+		display: inline-block
+		vertical-align: middle
 
 .menu
 	margin: -25px
@@ -675,6 +696,304 @@
 			>a
 				color: #bdbdbd 
 				cursor: default
+
+.info__sort, .sort
+	margin-bottom: 25px
+.info__sort-title, .sort__title
+	display: inline-block
+	margin-right: 15px
+	vertical-align: middle
+.sort__title
+	font-size: 16px
+.sort_border
+	padding-bottom: 20px
+	border-bottom: 1px solid #f0f0f0 
+
+.info__accos-title
+	position: relative
+	margin-bottom: 20px
+	padding: 3px 0 3px 40px
+	cursor: pointer
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+s(info-accos-folder)
+	&.is-active
+		//font-weight: bold
+		i
+			+s(info-accos-folder-a)
+.info__accos-item
+	display: none
+	padding-left: 40px 
+	margin-top: -10px
+	.info__accos-item
+		margin: 0 0 10px
+	.info__accos-title
+		margin-bottom: 10px
+
+.poll__title
+	margin-bottom: 25px
+
+.popup
+	display: none 
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 100px 0 
+	overflow: auto
+	z-index: 1000 
+.popup__bg
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0,.6)
+	z-index: 2
+.popup__in
+	position: relative
+	width: 450px
+	padding: 25px
+	margin: 0 auto
+	background: #FFF 
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+	z-index: 4 
+.popup__title
+	margin-bottom: 10px
+	padding-right: 50px
+	+cond
+	font-size: 24px
+.popup__close
+	position: absolute
+	top: 25px
+	right: 25px
+	+s(popup-close)
+
+.control
+	margin-right: -20px
+	font-size: 0
+	text-align: center
+.control__item
+	display: inline-block
+	width: 470px
+	margin: 0 20px 20px 0
+	background: #FFF 
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+	font-size: 14px
+	vertical-align: top
+	text-align: left
+	+clr
+.control__item_big
+	.control__name
+		font-size: 35px
+	.control__position
+		font-size: 16px
+	.control__details
+		min-height: 160px 
+.control__ava
+	float: left
+	img
+		display: block
+.control__details
+	position: relative
+	min-height: 95px
+	padding: 15px 25px 40px
+	overflow: hidden
+.control__name
+	margin-bottom: 10px
+	+cond
+	font-size: 19px
+	line-height: 1
+.control__position
+	color: #7F7F7F 
+.control__link
+	position: absolute
+	right: 25px
+	bottom: 10px
+	span, i
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 10px 
+		+cond
+		font-size: 19px
+	i
+		position: relative
+		top: -1px
+		+s(control-arr)
+.control__mail
+	position: absolute
+	left: 25px
+	bottom: 15px
+	width: 180px
+	a
+		display: block
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+
+.photo__list
+	margin-right: -30px
+	font-size: 0
+.photo__list_sub
+	.photo__name
+		span
+			+reg
+			color: $cl
+			font-size: 14px
+			line-height: 1.4 
+.photo__item
+	position: relative
+	display: inline-block
+	width: 210px
+	height: 235px
+	margin: 0 25px 25px 0
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+	vertical-align: top
+.photo__name
+	position: absolute
+	left: 0
+	bottom: 0
+	right: 0
+	span
+		display: table-cell
+		width: 210px
+		height: 45px
+		padding: 15px
+		background: #FFF 
+		vertical-align: middle
+		+cond
+		font-size: 19px
+		line-height: 1
+.photo__album
+	padding-bottom: 10px
+	margin-bottom: 25px
+	border-bottom: 1px solid #f0f0f0 
+	line-height: 1
+	+cond
+	font-size: 35px
+
+.contact__head
+	padding: 25px
+	margin-bottom: 20px
+	background-color: #fff
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+	+clr
+.contact__head-item
+	float: left
+	width: 33%
+	padding: 0 30px
+	border-left: 1px solid #f0f0f0 
+	+box
+	&:first-child
+		padding: 0 30px 0 0 
+		border: none
+.contact__head-title
+	+cond
+	font-size: 16px
+.contact__head-in
+	font-size: 19px
+	line-height: 35px
+	span
+		font-size: 25px
+.contact__map
+	margin-bottom: 25px
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+.contact__list	
+	margin: 0 -20px -25px 0
+	font-size: 0
+.contact__item
+	position: relative
+	display: inline-block
+	width: 420px
+	min-height: 265px
+	padding: 20px 25px
+	margin: 0 20px 20px 0
+	background-color: #fff
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+	vertical-align: top
+	font-size: 14px
+.contact__point
+	position: absolute
+	top: 0
+	right: 0
+	width: 115px
+	height: 56px
+	padding-top: 5px
+	background: $org 
+	font-size: 0
+	text-align: center
+	text-decoration: none
+	i
+		display: inline-block
+		+s(contact-point)
+	span
+		display: block
+		+cond
+		text-shadow: 0 -1px 0 rgba(0,0,0,.21)
+		color: #fff 
+		font-size: 14px
+.contact__title
+	margin-bottom: 30px
+	padding-right: 100px
+	+cond
+	font-size: 25px
+	color: $bl
+	line-height: 1
+	span
+		font-size: 19px
+		color: #BBB 
+.contact__details
+	li
+		margin-bottom: 10px
+		+clr
+.contact__details-type
+	float: left
+	width: 130px
+	margin-right: 20px
+	font-size: 16px
+.contact__details-in
+	display: table
+.contact__details-phone
+	position: relative
+	top: -2px
+	font-size: 19px
+	span
+		font-size: 14px
+	b
+		font-weight: normal
+		font-size: 16px
+		color: #B2B2B2 
+.contact__map
+	width: 960px
+	height: 380px
+	box-shadow: 0 0 15px rgba(0,0,0,.11)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -135,13 +135,6 @@ input, button, textarea
 	height: 145px
 	z-index: 4 
 .header_filial
-	.logo
-		top: 40px
-		background: none
-		img
-			display: block
-			padding: 10px 30px 10px 0
-			border-right: 1px solid #e0e0e0 
 	.search-form
 		top: 90px
 	.phone
@@ -149,11 +142,14 @@ input, button, textarea
 		left: auto
 		right: 10px
 .logo
-	position: absolute
-	top: 25px
-	left: 0	
+	float: left
+	margin-top: 25px
 	+s(vostok-logo)
-
+.logo-filial
+	float: left
+	margin: 50px 50px 0 0
+	img
+		display: block
 
 .nav
 	position: relative

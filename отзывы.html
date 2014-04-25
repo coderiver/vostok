@@ -133,7 +133,6 @@
 							</ul>
 						</li>
 						<li class="menu__lvl-1"><a href="#">физическим<br>лицам</a></li>
-						
 					</ul>
 				</div>
 				<div class="l-section l-section_reset">
@@ -144,6 +143,7 @@
 					</div>
 					<!-- review -->
 					<div class="review">
+						<a class="review__write js-popup" data-popup="popup_review" href="#"><i></i><span>Написать отзыв</span></a>
 						<div class="review__list">
 							<div class="review__item">
 								<div class="review__by">
@@ -268,6 +268,41 @@
 		<div class="created">
 			<span>Разработка сайта:</span>
 			<a class="created__logo" href="#"></a>
+		</div>
+	</div>
+</div>
+<!-- popup -->
+<div class="popup popup_review">
+	<div class="popup__bg"></div>
+	<div class="popup__in">
+		<button class="popup__close"></button>
+		<div class="popup__title">Написать отзыв</div>
+		<div class="popup__form">
+			<label class="field">
+				<span class="field__label">Имя и Фамилия</span>
+				<span class="field__el">
+					<input type="text">
+				</span>
+			</label>
+			<label class="field">
+				<span class="field__label">Компания</span>
+				<span class="field__el">
+					<input type="text">
+				</span>
+			</label>
+			<label class="field">
+				<span class="field__label">Email</span>
+				<span class="field__el">
+					<input type="text">
+				</span>
+			</label>
+			<label class="field">
+				<span class="field__label">Текст сообщения</span>
+				<span class="field__el">
+					<textarea name="" style="height: 200px;"></textarea>
+				</span>
+			</label>
+			<button class="btn">Отправить</button>
 		</div>
 	</div>
 </div>
