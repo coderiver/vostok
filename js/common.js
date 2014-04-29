@@ -133,4 +133,11 @@ $(document).ready(function() {
         });
     };
 
+    // city
+    var city = $('.js-city');
+    city.find('.city__head i').on('click', function(){
+        $(this).parent().parent().toggleClass('is-active');
+        $(this).parent().next().toggle();
+    });
+
 });

@@ -87,7 +87,13 @@ input, button, textarea
 
 .top
 	background: #21262b 
-.top__city
+.top__close
+	float: right
+	margin-top: 17px
+	+s(top-close)
+.city
+	float: left
+.city__ask
 	float: left
 	margin-right: 30px
 	padding: 15px 20px
@@ -105,29 +111,63 @@ input, button, textarea
 		+cond
 		color: #FFF
 		text-transform: uppercase 
-.top__city-yes
-	margin-right: 6px
-	background: $bl
-.top__city-no
-	background: $org 
-.top__site
+	.city__ask-yes
+		margin-right: 6px
+		background: $bl
+	.city__ask-no
+		background: $org 
+.city__title, .city__in, .city__head
 	float: left
-	margin-top: 17px
+	height: 60px
+	line-height: 60px
+.city__title
+	margin-right: 15px
+	font-size: 14px
+	color: #A2A3A4 
+.city__head
+	float: left
+	padding: 0 15px	
 	color: #A2A3A4
-	a, span
+	a, i
 		display: inline-block
-.top__site-name
-	margin-left: 8px
-	font-size: 16px
-	color: #fff 
-.top__site-arr
-	margin-left: 15px 
-	+s(top-site-arr)
-	vertical-align: middle
-.top__close
-	float: right
-	margin-top: 17px
-	+s(top-close)
+		vertical-align: middle
+	a
+		font-size: 16px
+		color: #fff 
+		text-decoration: none
+	i
+		margin-left: 15px 
+		+s(top-site-arr)
+		cursor: pointer
+.city__in
+	position: relative
+	&.is-active
+		.city__head
+			background: #2C2F39 
+.city__list
+	display: none
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	padding: 5px 25px 5px 15px
+	background: #2C2F39 
+	z-index: 10 
+	ul
+		height: 130px
+		overflow: auto 
+		&::-webkit-scrollbar
+			width: 7px
+		&::-webkit-scrollbar-thumb
+			background: #00afef
+		&::-webkit-scrollbar-track-piece
+			background: none
+	li
+		padding: 5px 5px 5px 0
+		line-height: 1.4
+	a
+		color: #CCF1FF 
+		text-decoration: none
 
 .header
 	position: relative
