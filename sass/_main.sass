@@ -184,6 +184,8 @@
 			right: 20px
 			bottom: 30px
 			+s(main-link-arr)
+		&:hover
+			text-decoration: underline
 		i
 			position: absolute
 			top: 20px
@@ -279,6 +281,8 @@
 	box-shadow: 0 0 13px rgba(56,60,71,.2)
 	a
 		text-decoration: none
+		&:hover
+			text-decoration: underline
 .m-news_filial
 	height: 260px
 	.m-news__item
@@ -352,6 +356,11 @@
 	i
 		margin-left: 15px
 		+s(arr-right)
+	&:hover
+		i
+			+s(arr-right-h)
+		span
+			text-decoration: underline
 .m-news__pager
 	position: absolute
 	left: 20px
@@ -398,6 +407,9 @@
 		top: 20px
 		right: 20px
 		+s(main-link-arr-white) 
+	&:hover
+		span
+			text-decoration: underline
 	i, span
 		display: inline-block
 		vertical-align: middle

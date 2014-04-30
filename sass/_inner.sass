@@ -46,16 +46,9 @@
 	position: relative
 	display: inline-block
 	width: 225px 
+	height: 40px
 	vertical-align: middle
-	select
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		border: none
-		opacity: 0 
-		//-webkit-appearance: none
+	+nosel
 .select_bigger
 	width: 235px
 .select_biggest
@@ -64,16 +57,89 @@
 	position: relative
 	height: 40px
 	padding: 0 50px 0 10px
-	box-shadow: 0 0 12px rgba(0,0,0,.12)
 	line-height: 40px
 	overflow: hidden
 	text-overflow: ellipsis
 	white-space: nowrap
+	cursor: pointer
 	i
 		position: absolute
 		top: 7px
 		right: 10px
 		+s(select)
+.select__in
+	position: relative
+	background: #FFF 
+	box-shadow: 0 0 12px rgba(0,0,0,.12)
+	&.is-open
+		z-index: 1000 
+.select__list
+	display: none
+	padding: 15px 20px 15px 10px
+	border-top: #F2F2F2 1px solid
+	background: #FFF 
+	ul
+		height: 95px 
+		overflow: auto
+		&::-webkit-scrollbar
+			width: 6px
+		&::-webkit-scrollbar-thumb
+			background: #00afef
+		&::-webkit-scrollbar-track-piece
+			background: #f5f5f5
+	li
+		padding-right: 10px 
+		text-decoration: none
+		color: #000
+		cursor: pointer
+		&:hover
+			text-decoration: underline
+.select__date
+	display: none
+	padding: 10px 30px 15px
+	border-top: #F2F2F2 1px solid
+	background: #FFF 
+	.ui-datepicker-calendar
+		font-size: 14px
+		text-align: center
+		th
+			font-weight: normal 
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.ui-datepicker-title
+		text-align: center
+	.ui-datepicker-header
+		position: relative
+		margin-bottom: 10px
+	.ui-datepicker-prev, .ui-datepicker-next
+		position: absolute
+		top: 50%
+		width: 10px
+		height: 14px
+		margin-top: -7px
+		cursor: pointer
+		span
+			position: absolute
+			top: 4px 
+			+hidetext
+		&:hover
+			background: $bl 
+			span
+				+s(dp-prev-h)
+			span
+				+s(dp-next-h)
+	.ui-datepicker-prev
+		left: 0
+		span
+			left: 3px
+			+s(dp-prev)
+	.ui-datepicker-next
+		right: 0
+		span
+			right: 3px
+			+s(dp-next)
 
 .vacancy
 	overflow: hidden
@@ -506,6 +572,8 @@
 .subscribe__in
 	box-shadow: 0 0 12px rgba(0,0,0,.12)
 	font-size: 0
+	input, .btn
+		vertical-align: top
 	input
 		width: 140px
 		height: 30px
@@ -513,6 +581,16 @@
 	.btn
 		width: 85px
 		padding: 5px 0
+.tags__list
+	text-align: center
+	li
+		display: inline
+		padding: 0 5px
+	a
+		color: #000 
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 
 .content
 	p, ul, ol
@@ -605,6 +683,12 @@
 	overflow: hidden
 	padding: 25px 30px
 	border: 1px solid $org
+.review__text
+	height: 58px
+	overflow: hidden
+	&.is-open
+		height: auto
+		overflow: visible
 .review__more
 	padding-top: 5px
 	a
@@ -631,14 +715,21 @@
 
 .menu
 	margin: -25px
+	+nosel
 	li
 		border-top: 1px solid #eee
 		&:first-child
 			border: none
-	a
+		ul
+			display: none
+	a, span
 		text-decoration: none
+		color: $bl
+		cursor: pointer 
+		&:hover
+			text-decoration: underline
 .menu__lvl-1
-	>a
+	>a, >span
 		display: block
 		position: relative
 		padding: 10px 40px 10px 25px
@@ -649,26 +740,28 @@
 		cursor: pointer
 		&:first-letter
 			text-transform: uppercase
+	>span
 		&:after
 			content: ""
 			position: absolute
 			top: 50%
 			right: 20px
 			margin-top: -3px
-			+s(menu-arr)  
+			+s(menu-arr)
 	&.is-active
-		>a
+		>a, >span
 			background: $org
 			color: #fff
+		>span
 			&:after
 				+sp(menu-arr-a)
 .menu__lvl-2
 	>li
-		>a
+		>a, >span
 			display: block
 			padding: 10px 20px
 		&.is-sub
-			>a
+			>a, >span
 				position: relative
 				padding: 10px 40px 10px 20px
 				&:after
@@ -679,21 +772,21 @@
 					margin-top: -3px
 					+s(menu-arr) 
 		&.is-active
-			>a
+			>a, >span
 				background: $bl 
 				color: #FFF 
 				&:after	
 					+s(menu-arr-a) 
 .menu__lvl-3
 	>li
-		>a
+		>a, >span
 			display: block
 			padding: 10px 30px
 			color: $cl 
 			&:hover
 				color: $bl 
 		&.is-active
-			>a
+			>a, >span
 				color: #bdbdbd 
 				cursor: default
 
@@ -734,6 +827,14 @@
 
 .poll__title
 	margin-bottom: 25px
+.poll__title_border
+	margin-bottom: 15px
+	padding-bottom: 10px
+	border-bottom: 1px solid #eaeaea 
+.poll__variants
+	margin-bottom: 25px
+	.radio
+		margin-bottom: 5px
 
 .popup
 	display: none 
@@ -743,15 +844,18 @@
 	right: 0
 	bottom: 0
 	padding: 100px 0 
+	background: rgba(0,0,0,.6)
 	overflow: auto
 	z-index: 1000 
+.popup_biography
+	.popup__in
+		width: 910px 
 .popup__bg
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
 	bottom: 0
-	background: rgba(0,0,0,.6)
 	z-index: 2
 .popup__in
 	position: relative
@@ -891,14 +995,21 @@
 	&:first-child
 		padding: 0 30px 0 0 
 		border: none
+	&:last-child
+		padding: 0 0 0 30px 
 .contact__head-title
 	+cond
 	font-size: 16px
 .contact__head-in
 	font-size: 19px
 	line-height: 35px
-	span
+	i
 		font-size: 25px
+		font-style: normal 
+	span, a
+		display: inline-block
+		vertical-align: middle
+		line-height: 1
 .contact__map
 	margin-bottom: 25px
 	box-shadow: 0 0 15px rgba(0,0,0,.11)
@@ -973,12 +1084,45 @@
 	box-shadow: 0 0 15px rgba(0,0,0,.11)
 
 
-
-
-
-
-
-
+.biography
+	+clr
+.biography__left
+	float: left
+	margin-right: 25px
+.biography__ava
+	margin-bottom: 25px 
+	img
+		display: block
+.biography__details-item
+	margin-top: 20px
+	&:first-child
+		margin: 0
+.biography__details-type
+	margin-bottom: 5px
+	+cond
+	font-size: 16px
+.biography__details-phone
+	font-size: 19px
+	span
+		font-size: 25px
+.biography__details-mail
+	font-size: 19px
+.biography__name
+	padding: 0 50px 15px 0
+	+cond
+	font-size: 35px
+	line-height: 1
+.biography__position
+	margin-bottom: 15px
+	font-size: 15px
+	color: #7F7F7F 
+.biography__title
+	margin-bottom: 10px
+	+cond
+	font-size: 19px
+.biography__text
+	p
+		margin-bottom: 15px
 
 
 

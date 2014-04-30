@@ -11,22 +11,6 @@
 <body>
 <!-- wrapper -->
 <div class="wrapper">
-	<!-- top -->
-	<div class="top" style="display: none;">
-		<div class="l-center">
-			<div class="top__city">
-				<span>Вы из тюмени?</span>
-				<button class="top__city-yes">да</button>
-				<button class="top__city-no">нет</button>
-			</div>
-			<div class="top__site">
-				<span>Предлагаем Вам перейти на сайт</span>
-				<a class="top__site-name" href="#">Тюменьэнергосбыт</a>
-				<a class="top__site-arr" href="#"></a>
-			</div>
-			<button class="top__close"></button>
-		</div>
-	</div>
 	<div class="wrapper__in">
 		<div class="l-center">
 			<!-- header -->
@@ -105,18 +89,17 @@
 			<div class="l l_reverse">
 				<div class="l-aside">
 					<!-- menu -->
-					<ul class="menu">
-						<li class="menu__lvl-1"><a href="#">Стандарты качества обслуживания клиентов</a></li>
-						<li class="menu__lvl-1 is-active">
-							<a href="#">юридическим<br>лицам</a>
+					<ul class="menu js-menu">
+						<li class="menu__lvl-1">
+							<span>Стандарты качества обслуживания клиентов</span>
 							<ul class="menu__lvl-2">
 								<li><a href="#">Тарифы и цены на электроэнергию (мошность)</a></li>
 								<li><a href="#">Способы оплатыэлектроэнергии</a></li>
 								<li><a href="#">Офисы обслуживания</a></li>
 								<li><a href="#">Заключения договора энергоснабжения</a></li>
 								<li><a href="#">Приборы учета</a></li>
-								<li class="is-sub is-active">
-									<a href="#">Услуги и сервисы</a>
+								<li class="is-sub">
+									<span>Услуги и сервисы</span>
 									<ul class="menu__lvl-3">
 										<li><a href="#">Вывод предприятий на ОРЭ</a></li>
 										<li><a href="#">Энерготрейдинг</a></li>
@@ -132,7 +115,59 @@
 								<li><a href="#">Полезная информация</a></li>
 							</ul>
 						</li>
-						<li class="menu__lvl-1"><a href="#">физическим<br>лицам</a></li>
+						<li class="menu__lvl-1">
+							<span>юридическим<br>лицам</span>
+							<ul class="menu__lvl-2">
+								<li><a href="#">Тарифы и цены на электроэнергию (мошность)</a></li>
+								<li><a href="#">Способы оплатыэлектроэнергии</a></li>
+								<li><a href="#">Офисы обслуживания</a></li>
+								<li><a href="#">Заключения договора энергоснабжения</a></li>
+								<li><a href="#">Приборы учета</a></li>
+								<li class="is-sub">
+									<span>Услуги и сервисы</span>
+									<ul class="menu__lvl-3">
+										<li><a href="#">Вывод предприятий на ОРЭ</a></li>
+										<li><a href="#">Энерготрейдинг</a></li>
+										<li><a href="#">Поставка электроэнергии крупным предприятиям с ОРЭ</a></li>
+										<li><a href="#">Внедрение АИИС КУЭ</a></li>
+										<li><a href="#">Управлениегарантирующими поставщиками</a></li>
+										<li><a href="#">Консультирование в электроэнергетике</a></li>
+										<li><a href="#">Реализованные проекты</a></li>
+										<li><a href="#">Технологическое присоединение</a></li>
+										<li class="is-active"><a href="#">Отзывы клиентов</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Полезная информация</a></li>
+							</ul>
+						</li>
+						<li class="menu__lvl-1">
+							<span>физическим<br>лицам</span>
+							<ul class="menu__lvl-2">
+								<li><a href="#">Тарифы и цены на электроэнергию (мошность)</a></li>
+								<li><a href="#">Способы оплатыэлектроэнергии</a></li>
+								<li><a href="#">Офисы обслуживания</a></li>
+								<li><a href="#">Заключения договора энергоснабжения</a></li>
+								<li><a href="#">Приборы учета</a></li>
+								<li class="is-sub">
+									<span>Услуги и сервисы</span>
+									<ul class="menu__lvl-3">
+										<li><a href="#">Вывод предприятий на ОРЭ</a></li>
+										<li><a href="#">Энерготрейдинг</a></li>
+										<li><a href="#">Поставка электроэнергии крупным предприятиям с ОРЭ</a></li>
+										<li><a href="#">Внедрение АИИС КУЭ</a></li>
+										<li><a href="#">Управлениегарантирующими поставщиками</a></li>
+										<li><a href="#">Консультирование в электроэнергетике</a></li>
+										<li><a href="#">Реализованные проекты</a></li>
+										<li><a href="#">Технологическое присоединение</a></li>
+										<li class="is-active"><a href="#">Отзывы клиентов</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Полезная информация</a></li>
+							</ul>
+						</li>
+						<li class="menu__lvl-1">
+							<a href="#">Психическим<br>лицам</a>
+						</li>
 					</ul>
 				</div>
 				<div class="l-section l-section_reset">
@@ -144,14 +179,14 @@
 					<!-- review -->
 					<div class="review">
 						<a class="review__write js-popup" data-popup="popup_review" href="#"><i></i><span>Написать отзыв</span></a>
-						<div class="review__list">
+						<div class="review__list js-review">
 							<div class="review__item">
 								<div class="review__by">
 									<div class="review__person">Василий Александрович Чекмарев</div>
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -163,7 +198,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -175,7 +210,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -187,7 +222,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -199,7 +234,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -211,7 +246,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -223,7 +258,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
@@ -235,7 +270,7 @@
 									<div class="review__company">ООО «Рубикон»</div>
 								</div>
 								<div class="review__in">
-									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы</div>
+									<div class="review__text">«Специалисты ОАО «Энергосбытовая компания «ВОСТОК» оказали серьезную информационную и техническую поддержку при внедрении автоматизированной информационно-измерительной системы Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempora, natus, nostrum ipsa aperiam eaque soluta at amet mollitia facere pariatur doloremque omnis excepturi voluptas sed. Harum, facere inventore doloribus!</div>
 									<div class="review__more">
 										<a href="#">Подробнее</a>
 									</div>
