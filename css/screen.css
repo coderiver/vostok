@@ -330,7 +330,7 @@ input, button, textarea { font-family: "Myriad Pro", Arial, sans-serif; font-siz
 .files__xls { background: url('../img/icons-s5b7f274638.png') 0 -2612px no-repeat; width: 23px; height: 31px; }
 
 .pager { background: #fda213; padding: 20px 0; margin: 25px -25px -25px; text-align: center; font-size: 0; }
-.pager a { display: inline-block; width: 16px; height: 16px; margin: 0 2px; line-height: 20px; vertical-align: middle; color: #515151; border: 1px solid transparent; border-radius: 50%; text-decoration: none; font-size: 14px; }
+.pager a { display: inline-block; width: 16px; height: 16px; margin: 0 2px; font-family: Arial, sans-serif; line-height: 16px; vertical-align: middle; color: #515151; border: 1px solid transparent; border-radius: 50%; text-decoration: none; font-size: 14px; }
 .pager a:hover { border-color: white; }
 .pager a.is-active { border-color: white; color: white; }
 .pager a.pager__prev, .pager a.pager__next { border: none; margin: 0 10px; }
