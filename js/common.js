@@ -3,7 +3,7 @@ ymaps.ready(init);
 
 // Инициализация и уничтожение карты при нажатии на кнопку.
 function init () {
-    var map_el = $('.map');
+    var map_el = $('.map_filial');
     if (map_el.length) {
         var btn = $('.map_filial .map__point'),
             btn_back = $('.map__back'),
