@@ -64,7 +64,7 @@
 
 .fancybox-opened .fancybox-title { visibility: visible; }
 
-.fancybox-title-float-wrap { position: absolute; bottom: 0; right: 50%; margin-bottom: -35px; z-index: 8050; text-align: center; }
+.fancybox-title-float-wrap { position: absolute; bottom: 0; right: 50%; margin-bottom: 10px; z-index: 8050; text-align: center; }
 .fancybox-title-float-wrap .child { display: inline-block; margin-right: -100%; padding: 2px 20px; background: rgba(0, 0, 0, 0.8); border-radius: 15px; text-shadow: 0 1px 2px #222222; color: white; font-weight: bold; line-height: 24px; white-space: nowrap; }
 
 .fancybox-title-outside-wrap { position: relative; margin-top: 10px; color: white; }

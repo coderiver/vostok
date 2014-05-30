@@ -23,7 +23,10 @@
 	background-repeat: no-repeat
 .map-bg__in
 	background: url(../img/map.png) 
-
+.js-blur
+	&.is-active
+		opacity: 0.33
+		-webkit-filter: blur(2px)
 .map
 	position: relative
 	height: 295px
@@ -74,6 +77,9 @@
 		padding: 4px 7px 1px
 		font-size: 14px 
 		text-transform: uppercase
+	// &.is-none
+	// 	&.is-active
+	// 		display: none
 .map__arr
 	display: block
 	+s(map-arr)

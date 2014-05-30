@@ -6,6 +6,7 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<!--<link rel="stylesheet" media="screen" href="css/fancybox.css">-->
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/cycle.js"></script>
@@ -14,6 +15,24 @@
 	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 	<script src="js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+	/* Apply fancybox to multiple items */
+	
+	$(".js-fancybox").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false,
+		'padding'       : 50,
+		'width'         : 960
+		
+	});
+	
+});
+	</script>
 </head>
 <body>
 <!-- wrapper -->
@@ -105,7 +124,7 @@
 					<div class="photo__list photo__list_sub">
 						<a href="img/main-filial.jpg" class="photo__item js-fancybox" rel="photoalbum" title="Описание для фотографии">
 							<div class="photo__img">
-								<img src="http://placehold.it/210x160" alt="">
+								<img src="http://placehold.it/210x160" alt="" >
 							</div>
 							<div class="photo__name">
 								<span>Спартакиада "Энерг - 2013"</span>
@@ -121,7 +140,7 @@
 						</a>
 						<a href="img/main-filial.jpg" class="photo__item js-fancybox" rel="photoalbum" title="Описание для фотографии">
 							<div class="photo__img">
-								<img src="http://placehold.it/210x160" alt="">
+								<img src="http://placehold.it/210x160" alt="" >
 							</div>
 							<div class="photo__name">
 								<span>Велопробег "Делаем жизнь ярче" 12.08.2012 "Энергия - 2013"</span>
@@ -145,7 +164,7 @@
 						</a>
 						<a href="img/main-filial.jpg" class="photo__item js-fancybox" rel="photoalbum" title="Описание для фотографии">
 							<div class="photo__img">
-								<img src="http://placehold.it/210x160" alt="">
+								<img src="http://placehold.it/210x160" alt="" >
 							</div>
 							<div class="photo__name">
 								<span>Велопробег "Делаем жизнь ярче" 12.08.2012 "Энерг - 2013"</span>
@@ -153,7 +172,7 @@
 						</a>
 						<a href="img/main-filial.jpg" class="photo__item js-fancybox" rel="photoalbum" title="Описание для фотографии">
 							<div class="photo__img">
-								<img src="http://placehold.it/210x160" alt="">
+								<img src="http://placehold.it/210x160" alt="" >
 							</div>
 							<div class="photo__name">
 								<span>Спартакиада "Энергия - 2013"</span>
