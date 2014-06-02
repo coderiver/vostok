@@ -249,12 +249,16 @@ $(document).ready(function() {
             el.removeClass('is-open');
             el_date.removeClass('is-open');
         });
-        $('.js-none').click(function(){
-            $('.js-none').hide();
-            $('.js-blur').addClass('is-active');
-            return false;
-        })
     }
     select();
+
+    $('.js-none').click(function(){
+        $('.js-none').hide();
+        $('.js-blur').addClass('is-active');
+        var map_region = $(this).attr('href');
+        // console.log(map_region);
+        $(".js-region[data-block="+map_region+"]").show();    
+        return false;
+    })
 
 });

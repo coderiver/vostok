@@ -502,10 +502,10 @@
 .news__item
 	position: relative
 	min-height: 100px
-	padding: 10px 30px 15px 150px
+	padding: 10px 30px 15px
 	border-top: 1px solid #e4e4e4
 	&:first-child
-		padding: 30px 30px 15px 150px
+		padding: 30px 30px 15px
 		border: none
 		.news__date
 			top: 30px
@@ -790,6 +790,17 @@
 			>a, >span
 				color: #bdbdbd 
 				cursor: default
+
+.menu_charter
+	li
+		a
+			&:hover
+				text-decoration: none
+				color: #fff 
+				background: #00afee 
+		span
+			&:hover
+				text-decoration: none
 
 .info__sort, .sort
 	margin-bottom: 25px
@@ -1125,14 +1136,17 @@
 	p
 		margin-bottom: 15px
 
-
-
-
-
-
-
-
-
+.error-404
+	padding: 85px 0 135px 
+	text-align: center
+	font-size: 35px
+	+cond
+	h1
+		font-size: 100px
+		font-weight: 300 !important 
+	.info
+		margin-top: 30px
+		font-size: 20px
 
 
 

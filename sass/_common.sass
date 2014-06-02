@@ -252,11 +252,26 @@ input, button, textarea
 	position: absolute
 	top: 100%
 	left: 0
-	width: 220px
+	width: 258px
 	padding-top: 17px 
+	li
+		position: relative
+		&:hover
+			.nav__sub__sub
+				display: block
+		.nav__sub__sub
+			position: absolute
+			top: 0
+			right: -258px
+			width: 258px
+			display: none
+			ul
+				&:before
+					content: none
+				li
+					border: none 
 	ul
 		position: relative
-		padding: 7px 20px
 		background: #FFF 
 		box-shadow: 0 0 15px rgba(0,0,0,.17)
 		&:before
@@ -266,20 +281,29 @@ input, button, textarea
 			left: 50px
 			+arr(20,10,#fff,t) 
 		li
-			border-top: #E3E3E3 1px solid 
-			&:first-child
-				border: none
+			padding: 0 20px
+			&:hover
+				background: $org
+				a
+					color: #FFF 
+				li
+					a
+						color: $bl 
+						&:hover
+							color: #FFF 
 			&:first-letter
 				text-transform: uppercase
 			&.is-active
 				a
 					color: $org 
+					&:hover
+						color: #FFF 
 		a
 			display: block
 			padding: 10px 0
 			color: $bl 
 			&:hover
-				color: $org 
+				color: #fff
 .search-form
 	position: absolute
 	top: 58px 
@@ -360,11 +384,29 @@ input, button, textarea
 			left: 0
 			+s(radio)
 		
-
-
-
-
-
+//map__list
+.map__list, .map__item
+	position: absolute
+	width: 100%
+	top: 0
+	left: 0
+	bottom: 0
+.map__item
+	display: none
+	img
+		display: block
+	&.map__item_mos
+	&.map__item_ros
+	&.map__item_per
+	&.map__item_eka
+	&.map__item_che
+	&.map__item_oms
+	&.map__item_noy
+	&.map__item_cur
+	&.map__item_tym
+	&.map__item_oren
+	.map__point
+		z-index: 200
 
 
 
