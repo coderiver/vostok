@@ -221,7 +221,9 @@ div.poll__items-list > div:first-child { border: none; }
 
 .clear { clear: both; }
 
-.date { color: gray; margin: 3px 0; }
+.date { color: gray; margin: 3px 0 6px; }
+.date a { color: gray; text-decoration: none; }
+.date a:hover { text-decoration: underline; }
 
 .pager.pager-space { margin: 18px -2px -24px; font-family: "Myriad Pro Condensed", Arial, sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; }
 
@@ -229,6 +231,8 @@ div.poll__items-list > div:first-child { border: none; }
 
 .poll__row { text-align: center; }
 .poll__row .poll__img { margin-bottom: 35px; }
+
+.news__info { margin-bottom: 0; }
 
 .breadcrumbs { padding: 30px 25px 20px; color: #b0b0b0; font-size: 12px; }
 .breadcrumbs li { display: inline; }
