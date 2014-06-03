@@ -439,13 +439,33 @@ input, button, textarea
 		color: #7F7F7F 
 		p
 			margin: 0
-
+.l
+	.l-left
+		&.news-insert
+			width: 462px 
 .news-insert
-	margin-left: -160px
-	padding: 25px
-	width: 462px
+	margin-left: -150px
+	padding: 25px 55px
+	color: #fff 
+	background: #fda213
 	+box	
 	.news-insert__left
+		width: 160px
+		font-size: 70px
+		+cond
+		span
+			font-size: 50px
 	.news-insert__right
+		width: 198px
+		font-size: 20px
+		line-height: 1.3
 	.news-insert__left, .news-insert__right
+		vertical-align: top
 		display: inline-block
+
+.news__item_statute
+	padding-left: 25px !important
+
+.l-section
+	&.l-page
+		+box
