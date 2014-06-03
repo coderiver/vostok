@@ -334,7 +334,7 @@ input, button, textarea
 	vertical-align: middle
 .phone__ico
 	position: relative
-	top: -2px
+	top: 3px
 	margin-right: 20px
 	+s(phone)
 .phone__number
@@ -407,11 +407,45 @@ input, button, textarea
 	&.map__item_oren
 	.map__point
 		z-index: 200
+.l-aside_mod
+	margin-top: 20px
+	.btn
+		margin-top: 20px
 
+.quote
+	position: relative
+	padding: 24px 70px 24px 35px 
+	margin-right: -70px
+	background: #F5F5F5 
+	.quote__top
+		position: relative
+		padding: 0 32px 
+		font-size: 20px
+		&:before
+			position: absolute
+			content: ""
+			top: 5px
+			left: 0
+			+s(qu-top) 
+		&:after
+			position: absolute
+			content: ""
+			bottom: 5px
+			right: 0
+			+s(qu-bot) 
+	.quote__bot
+		margin-top: 30px
+		text-align: right
+		color: #7F7F7F 
+		p
+			margin: 0
 
-
-
-
-
-
-
+.news-insert
+	margin-left: -160px
+	padding: 25px
+	width: 462px
+	+box	
+	.news-insert__left
+	.news-insert__right
+	.news-insert__left, .news-insert__right
+		display: inline-block

@@ -57,10 +57,8 @@
 	<div class="wrapper__in">
 		<div class="l-center">
 			<!-- header -->
-			<header class="header header_filial">
-				<a class="logo-filial" href="#">
-					<img src="img/logo-filial.png" alt="">
-				</a>
+			<header class="header">
+				<a class="logo" href="#"></a>
 				<div class="phone">
 					<i class="phone__ico"></i>
 					<div class="phone__number">+7 495 <span>775-24-97</span></div>
@@ -134,28 +132,41 @@
 				<button class="map__back"><i></i><span>Вернуться на карту региона</span></button>
 				<div id="map" class="map__real"></div>
 				<!-- enter -->
-				<div class="enter">
+				<!-- <div class="enter">
 					<i class="enter__ico"></i>
 					<div class="enter__title">Вход в личный кабинет</div>
 					<a class="enter__btn" href="#">Войти</a>
-				</div>
+				</div> -->
 			</div>
 			<!-- main -->
 			<div class="main">
 				<div class="main__column">
-					<ul class="main__links main__links_filial">
-						<li class="is-orange"><a href="#"><i class="main__ico-4"></i><span>юридическим лицам</span></a></li>
-						<li class="is-orange"><a href="#"><i class="main__ico-1"></i><span>физическим лицам</span></a></li>
+					<ul class="main__links">
+						<li><a href="#"><i class="main__ico-1"></i><span>физическим лицам</span></a></li>
 						<li class="is-orange"><a href="#"><i class="main__ico-2"></i><span>интернет-приемная</span></a></li>
-					</ul>
-					<ul class="main__links main__links_wide main__links_filial">
 						<li><a href="#"><i class="main__ico-3"></i><span>Список лучших клиентов</span></a></li>
-						<li><a href="#"><i class="main__ico-4"></i><span>злостные неплатильщики</span></a></li>
+						<li class="is-orange"><a href="#"><i class="main__ico-4"></i><span>юридическим лицам</span></a></li>
+						<li><a href="#"><i class="main__ico-5"></i><span>раскрытие информации</span></a></li>
+						<li class="is-orange"><a href="#"><i class="main__ico-6"></i><span>злостные неплательщики</span></a></li>
 					</ul>
+					<!-- partners -->
+					<div class="partners">
+						<div class="partners__title">Наши партнеры</div>
+						<div class="partners__slider">
+							<button class="partners__prev"></button>
+							<button class="partners__next"></button>
+							<div class="partners__in cycle-slideshow" data-cycle-fx="carousel" data-cycle-prev=".partners__prev" data-cycle-next=".partners__next" data-cycle-timeout="0" data-cycle-slides=".partners__item" data-cycle-visible="2">
+								<div class="partners__item"><img src="img/partner1.png" alt=""></div>
+								<div class="partners__item"><img src="img/partner2.png" alt=""></div>
+								<div class="partners__item"><img src="img/partner1.png" alt=""></div>
+								<div class="partners__item"><img src="img/partner2.png" alt=""></div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="main__column">
 					<!-- main news -->
-					<div class="m-news m-news_filial">
+					<div class="m-news">
 						<div class="m-news__slider cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pager=".m-news__pager" data-cycle-timeout="0" data-cycle-slides=".m-news__list" data-cycle-visible="1">
 							<div class="m-news__list">
 								<div class="m-news__item">
@@ -223,10 +234,19 @@
 							<span>все новости</span><i></i>
 						</a>
 					</div>
+					<!-- main contacts -->
+					<div class="m-contacts">
+						<i class="m-contacts__ico"></i>
+						<div class="m-contacts__title">Юридический адрес</div>
+						<div class="m-contacts__address">119121, Москва, Бурденко, 22</div>
+						<div class="m-contacts__phone">+7 <span>495</span> 775-24-97</div>
+						<div class="m-contacts__mail"><a href="mailto:info@vostok-electra.ru">info@vostok-electra.ru</a></div>
+						<a class="m-contacts__write" href="#"><i></i><span>написать нам</span></a>
+					</div>
 				</div>
 			</div>
 			<!-- partners -->
-			<div class="partners partners_filial">
+			<!-- <div class="partners partners_filial">
 				<div class="partners__title">Наши партнеры</div>
 				<div class="partners__slider">
 					<button class="partners__prev"></button>
@@ -238,7 +258,7 @@
 						<div class="partners__item"><img src="img/partner2.png" alt=""></div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!-- map background -->
 		<div class="map-bg map-bg_filial">
