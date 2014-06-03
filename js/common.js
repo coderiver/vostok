@@ -257,7 +257,7 @@ $(document).ready(function() {
         $('.js-blur').addClass('is-active');
         var map_region = $(this).attr('href');
         // console.log(map_region);
-        $(".js-region[data-block="+map_region+"]").show();    
+        $(".js-region[data-block="+map_region+"]").addClass('is-visible');    
         return false;
     })
 

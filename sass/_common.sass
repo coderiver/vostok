@@ -392,19 +392,61 @@ input, button, textarea
 	left: 0
 	bottom: 0
 .map__item
-	display: none
+	opacity: 0
+	visibility: hidden
+	+transition(2s)
 	img
 		display: block
+		transform: scale(0.01)
+		-moz-transform: scale(0.01)
+		-webkit-transform: scale(0.01)
+		-o-transform: scale(0.01)
+		+transition(2s)
 	&.map__item_mos
+		left: -260px
+		top: -270px
 	&.map__item_ros
+		left: -280px
+		top: -100px
 	&.map__item_per
+		left: -260px
+		top: -100px
 	&.map__item_eka
+		left: -250px
+		top: -100px
 	&.map__item_che
+		left: -290px
+		top: -100px
 	&.map__item_oms
+		left: -200px
+		top: -100px
 	&.map__item_noy
+		left: -160px
+		top: -100px
 	&.map__item_cur
+		left: -194px
+		top: -100px
 	&.map__item_tym
+		left: -186px
+		top: -100px
 	&.map__item_oren
+		left: -120px
+		top: -100px
+	&.map__item_ns
+		left: -250px
+		top: -120px
+	&.is-visible
+		top: 0
+		left: 0
+		opacity: 1
+		visibility: visible
+		img
+			width: auto
+			transform: scale(1)
+			-moz-transform: scale(1)
+			-webkit-transform: scale(1)
+			-o-transform: scale(1)
+
 	.map__point
 		z-index: 200
 .l-aside_mod
@@ -469,3 +511,102 @@ input, button, textarea
 .l-section
 	&.l-page
 		+box
+
+.contact__head_mod
+	position: relative
+	.contact__head-item
+		padding: 0 0 0 25px 
+		width: 29%
+	.contact__point_top
+		padding-top: 27px
+		height: 100%
+		+box
+
+.news__poll
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		top: 30px
+		left: 62px
+		+s(pul1l-pic) 
+	.news__title-big
+		margin-bottom: 8px
+.title__ico-poll
+	+s(ico_poll)
+
+.poll__img	
+	img
+		display: block
+
+.title__ico-poll 
+	background: url('../img/icons/ico_poll.png') no-repeat
+	width: 52px
+	height: 52px
+	
+.polls .select 
+	idth: 260px
+	
+.poll__item 
+	padding: 25px 0 20px 0
+	border-top: 1px solid #f0f0f0
+	overflow: hidden
+	width: 100%
+	
+.poll__item a 
+	background-color: #00afee
+	clear: both
+	color: #ffffff
+	font-family: "Myriad Pro Condensed", Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	font-size: 19px
+	display: block
+	height: 31px
+	margin-top: 15px
+	margin-left: 13%
+	padding-top: 4px
+	text-align: center
+	text-decoration: none
+	width: 130px
+
+div.poll__items-list>div:first-child
+	border: none
+
+.poll__item-logo 
+	float: left
+	width: 13%
+	
+.poll__item-logo img
+	display: block
+	margin: 9px auto
+	max-width: 110px
+	
+.poll__item-content 
+	float: left
+	width: 87%
+	color: #000000
+
+.poll__item-content h2
+	font-size: 25px 
+
+.clear 
+	clear: both
+	
+.date 
+	color: #808080
+	margin: 3px 0
+	
+.pager.pager-space
+	margin: 18px -2px -24px
+	font-family: "Myriad Pro Condensed", Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	font-size: 14px
+	
+.poll .poll__title_border 
+	padding-top: 10px
+	border-top: 1px solid #eaeaea
+
+.poll__row
+	text-align: center
+	.poll__img
+		margin-bottom: 35px
