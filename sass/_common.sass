@@ -195,6 +195,8 @@ input, button, textarea
 	float: left
 	margin-top: 25px
 	+s(vostok-logo)
+	&.logo_fil
+		+s(vostok-logo-fil)
 .logo-filial
 	float: left
 	margin: 50px 50px 0 0
@@ -658,12 +660,13 @@ div.poll__items-list>div:first-child
 
 .logo_border
 	position: relative
+	margin-top: 48px
 	margin-left: 10px
 	&:before
 		position: absolute
 		content: ""
-		top: 10px
+		top: 2px
 		left: -30px
-		bottom: 10px
+		bottom: 2px
 		width: 1px
 		background: #ccc  
