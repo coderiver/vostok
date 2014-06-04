@@ -758,8 +758,7 @@ div.poll__items-list > div:first-child { border: none; }
 .l .l__title span { padding-right: 5px; color: #afafaf; }
 
 .l_pad { padding-top: 0; }
-.l_pad .l-right { padding-right: 74px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.l_pad .l-left { padding-right: 36px; }
+.l_pad .l-right, .l_pad .l-left { padding-right: 36px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .l_pad .l__row { padding-left: 30px; }
 
 .l_reverse .l-aside { float: left; width: 190px; }
