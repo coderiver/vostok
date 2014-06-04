@@ -260,5 +260,10 @@ $(document).ready(function() {
         $(".js-region[data-block="+map_region+"]").addClass('is-visible');    
         return false;
     })
+    $(document).click(function() {
+        $('.js-region').removeClass('is-visible')
+        $('.js-blur').removeClass('is-active');
+        $('.js-none').show();
+    });
 
 });

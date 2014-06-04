@@ -42,7 +42,11 @@
 =cond
 	font-family: "Myriad Pro Condensed", Arial, sans-serif 
 	-webkit-font-smoothing: antialiased
-
++font(Myriad Pro Semibold, myriadpro-semib)  
+=semib
+	font-family: "Myriad Pro Semibold", Arial, sans-serif 
+	-webkit-font-smoothing: antialiased
+	
 $org: #fda213
 $bl: #00afee
 $cl: #21262b
@@ -417,9 +421,9 @@ input, button, textarea
 	&.map__item_che
 		left: -290px
 		top: -100px
-	&.map__item_oms
-		left: -200px
-		top: -100px
+	// &.map__item_oms
+	// 	left: -200px
+	// 	top: -100px
 	&.map__item_noy
 		left: -160px
 		top: -100px
@@ -618,3 +622,48 @@ div.poll__items-list>div:first-child
 
 .news__info
 	margin-bottom: 0
+
+.sort__title_pad
+	margin-left: 30px
+
+.files_black
+	p
+		color: #4c4c4c 
+.contact__map_mod
+	margin-bottom: 0 !important
+	width: 100% !important
+	+box-shadow(0 0 0 #fff !important)
+	.ymaps-map
+		width: 100% !important
+	.ymaps-copyrights-pane
+		display: none !important
+.row
+	position: relative
+	margin-bottom: 18px
+	padding-left: 14px
+	&:before
+		position: absolute
+		content: "" 
+		top: 6px
+		left: 0
+		width: 7px
+		height: 7px
+		background: #FDA213 
+		+border-radius(50%)
+	span
+		+semib
+
+.news__title-big_top
+	margin-top: 25px
+
+.logo_border
+	position: relative
+	margin-left: 10px
+	&:before
+		position: absolute
+		content: ""
+		top: 10px
+		left: -30px
+		bottom: 10px
+		width: 1px
+		background: #ccc  

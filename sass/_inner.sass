@@ -27,9 +27,9 @@
 	font-size: 25px
 	color: #fff 
 
-@each $s in ico-vacancy, ico-internet, ico-purchases, ico-registrator, ico-badcustomers, ico-news, ico-review, ico-info, ico-control, ico-photo, ico-contact
+@each $s in ico-vacancy, ico-geography, ico-internet, ico-purchases, ico-registrator, ico-badcustomers, ico-news, ico-review, ico-info, ico-control, ico-photo, ico-contact
 	.title__#{$s}
-		+s(#{$s})
+		+s(#{$s}) 
 
 .region
 	padding: 22px 25px
@@ -41,7 +41,12 @@
 	margin-right: 15px 
 	vertical-align: middle
 	font-size: 16px
-	
+.region__text
+	padding-left: 40px
+	width: 50%
+	vertical-align: middle
+	display: inline-block
+	+box
 .select
 	position: relative
 	display: inline-block
@@ -299,6 +304,13 @@
 .btn_orange
 	background: $org 
 
+.btn_question
+	margin: 20px 0 0 20px
+	padding: 10px 50px 8px
+	width: 274px
+	font-size: 20px
+	background: $org 
+	+box
 .boss
 	margin: -25px -25px 30px
 	+clr
