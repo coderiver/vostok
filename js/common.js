@@ -254,6 +254,7 @@ $(document).ready(function() {
 
     $('.js-none').click(function(){
         $('.js-none').hide();
+        $('.js-none-mos').hide();
         $('.js-blur').addClass('is-active');
         var map_region = $(this).attr('href');
         // console.log(map_region);
@@ -264,6 +265,7 @@ $(document).ready(function() {
         $('.js-region').removeClass('is-visible')
         $('.js-blur').removeClass('is-active');
         $('.js-none').show();
+        $('.js-none-mos').show();
     });
 
 });
