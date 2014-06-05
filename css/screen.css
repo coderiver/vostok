@@ -296,6 +296,8 @@ div.poll__items-list > div:first-child { border: none; }
 
 .region__block { width: 50%; font-size: 14px; vertical-align: top; display: inline-block; }
 
+.region__block_left { white-space: nowrap; }
+
 .region__title { display: inline-block; margin-right: 15px; vertical-align: middle; font-size: 16px; }
 
 .region__text { padding-left: 40px; vertical-align: middle; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -452,6 +454,8 @@ div.poll__items-list > div:first-child { border: none; }
 .files__doc { background: url('../img/icons-s892fb7ef18.png') 0 -3483px no-repeat; width: 23px; height: 31px; }
 
 .files__xls { background: url('../img/icons-s892fb7ef18.png') 0 -3524px no-repeat; width: 23px; height: 31px; }
+
+.files__form { padding: 8px 0; display: inline-block; }
 
 .pager { background: #fda213; padding: 20px 0; margin: 25px -25px -25px; text-align: center; font-size: 0; }
 .pager a { display: inline-block; width: 16px; height: 16px; margin: 0 2px; font-family: Arial, sans-serif; line-height: 16px; vertical-align: middle; color: #515151; border: 1px solid transparent; border-radius: 50%; text-decoration: none; font-size: 14px; }
@@ -765,7 +769,7 @@ div.poll__items-list > div:first-child { border: none; }
 .l_pad { padding: 0 0 0; }
 .l_pad .l-right, .l_pad .l-left { padding-right: 36px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .l_pad .l__row { padding-left: 30px; }
-.l_pad .l__row ul li { margin-bottom: 22px; }
+.l_pad .l__row ul li { margin-bottom: 9px; }
 
 .l_reverse { padding-top: 0; }
 .l_reverse .l-aside { float: left; width: 190px; }
