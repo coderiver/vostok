@@ -296,7 +296,7 @@ div.poll__items-list > div:first-child { border: none; }
 
 .region__title { display: inline-block; margin-right: 15px; vertical-align: middle; font-size: 16px; }
 
-.region__text { padding-left: 40px; width: 50%; vertical-align: middle; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.region__text { padding-left: 40px; float: right; width: 50%; vertical-align: middle; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .select { position: relative; display: inline-block; width: 225px; height: 40px; vertical-align: middle; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -762,6 +762,7 @@ div.poll__items-list > div:first-child { border: none; }
 .l_pad .l-right, .l_pad .l-left { padding-right: 36px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .l_pad .l__row { padding-left: 30px; }
 
+.l_reverse { padding-top: 0; }
 .l_reverse .l-aside { float: left; width: 190px; }
 .l_reverse .l-section { float: right; width: 695px; }
 
