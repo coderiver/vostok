@@ -208,7 +208,12 @@ $(document).ready(function() {
                 dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'], 
                 dateFormat: 'dd.mm.yy', 
                 firstDay: 1, 
-                isRTL: false 
+                isRTL: false,
+                onSelect: function(date) {
+                    el_date.find('.select__head span').html(date);
+                    el_date.removeClass('is-open');
+                    dp.hide();
+                }
             }; 
             $.datepicker.setDefaults($.datepicker.regional['ru']); 
             dp.datepicker({
@@ -268,4 +273,12 @@ $(document).ready(function() {
         $('.js-none-mos').show();
     });
 
+});
+
+$('.fancybox').fancybox({
+    helpers: {
+        overlay: {
+            locked: false
+        }
+    }
 });
